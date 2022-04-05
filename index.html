@@ -3,28 +3,36 @@
     <head>
         <meta charset="utf-8"/>
         <title>嗨</title>
-        <style>
+        <style>     /* 內部CSS */
             body {
-                  background-color:rgb(250, 245, 230);
-                  background-image:url(https://stickershop.line-scdn.net/stickershop/v1/sticker/290372334/android/sticker.png);
-                  background-repeat:no-repeat;
-                  background-position:5% 35%;
+                  background-color: rgb(250, 245, 230);
+                  background-image: url(https://stickershop.line-scdn.net/stickershop/v1/sticker/290372334/android/sticker.png);
+                  background-repeat: no-repeat;
+                  background-attachment: scroll;
+                  background-position: 110px 160px;
+                  /*以上也可寫成background: rgb(250, 245, 230) url(https://stickershop.line-scdn.net/stickershop/v1/sticker/290372334/android/sticker.png) no-repeat scroll 110px 160px */
                  }
-            div.part1 {
-                       box-sizing: border-box;
-                       height: 310px;
-                       width: 430px;
-                       color:black;   /* div class="part1"內的字彙都是黑色的 Ex:第24行 */
-                       background-image:url(https://cestmarie.com/wp-content/uploads/2019/01/Screenshot-3.png?hl=zh_TW);
-                       border: 5px double orange;
-                       margin: 110px 400px 80px;
-                       padding: 15px 5px 5px;
-                      } 
-            p.center {text-align:center}
+            #part1 {
+                     box-sizing: border-box;
+                     height: 310px;
+                     width: 430px;
+                     color:black;   /* div class="part1"內的字彙都是黑色的 Ex:第34行 */
+                     background-image:url(https://cestmarie.com/wp-content/uploads/2019/01/Screenshot-3.png?hl=zh_TW);
+                     border: 5px double orange;
+                     margin: 30px auto;
+                     padding: 15px 5px 5px;
+                    } 
+            .touch:hover {background-color:gray;}     
+            .center {text-align:center}
         </style>
+        <link rel="stylesheet" href="style.css">     <!-- 外部CSS -->
     </head>
     <body>
-        <div class="part1">        <!--div容器以內(包含<p>裡面的字)的字均為黑色-->
+        <h1 class="touch" style=" color:rgb(133, 42, 42); text-align:center; ">我的網頁Yee~~</h1>
+
+        <hr/>
+
+        <div id="part1">        <!--div容器以內(包含<p>裡面的字)的字均為黑色-->
             <p class="center"> 
                 用戶名稱:<input type="text" placeholder="請設置用戶名"/>
                 <br/>
@@ -47,17 +55,25 @@
 
         <hr/>
         <br/>
-        <br/>
-        <br/>
-
-        <div>
-            <h1></h1>
-
-
-
-
-
+        <center>
+        <div class="part2">     <!-- <h1>及<p>為內聯CSS -->
+            <h1 style="border:5px solid gold; border-radius:50px; background-color:yellow; text-align:center;">嗨~~</h1>   
+            <br/>
+            <p class="center" style="font-size:32px;">我好帥</p>
         </div>
+
+        <div class="part3">
+            <h1 style="border:5px solid gold; border-radius:30px 10px 30px 10px; background-color:yellow; text-align:center;">哈囉!</h1>   
+            <br/>
+            <p class="center" style="font-size:32px; text-align:center;">我好瘦</p>
+        </div>
+    </center>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <br/>
     </body>
 </html>
